@@ -74,7 +74,8 @@ module.exports.factory = (mongo, settings, errors, utilsService, mailsService) =
 
                     return user.save();
                 })
-                .then((user) => mailsService.sendResetLink(host, user));
+                .then((user) => mailsService.sendResetLink(host, user)
+                    .then(() => user));
         }
 
         /**
@@ -105,7 +106,8 @@ module.exports.factory = (mongo, settings, errors, utilsService, mailsService) =
                         });
                     });
                 })
-                .then((user) => mailsService.sendPasswordChanged(host, user));
+                .then((user) => mailsService.sendPasswordChanged(host, user)
+                    .then(() => user));
         }
 
         /**
@@ -185,7 +187,7 @@ module.exports.factory = (mongo, settings, errors, utilsService, mailsService) =
 
                     return user.save();
                 })
-                .then((user) =>  mailsService.sendActivationLink(host, user));
+                .then((user) => mailsService.sendActivationLink(host, user));
         }
     }
 

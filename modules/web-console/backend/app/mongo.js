@@ -113,7 +113,7 @@ module.exports.factory = function(settings, schemas) {
 
             helper.mongoBin.mongoDBPrebuilt.mongoDBDownload = new MongoDBDownload({
                 downloadDir: `${process.cwd()}/libs/mongodb`,
-                version: '3.4.7'
+                version: '4.0.9'
             });
 
             let mongodRun;

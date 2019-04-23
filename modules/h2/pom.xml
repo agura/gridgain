@@ -222,9 +222,6 @@
                         <additionalClasspathElement>${project.build.outputDirectory}</additionalClasspathElement>
                         <additionalClasspathElement>${project.build.testOutputDirectory}</additionalClasspathElement>
                     </additionalClasspathElements>
-                    <includes>
-                        <include>H2AllTestsSuite.java</include>
-                    </includes>
                     <excludes>
                         <exclude>TestAllJunit.java</exclude>
                         <exclude>H2TestCase.java</exclude>

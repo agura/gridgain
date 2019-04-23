@@ -152,7 +152,7 @@ module.exports.factory = function(settings, schemas) {
                             return Promise.reject(err);
                         });
                 })
-                .then(() => defineSchema(mongoose, schemas))
+                .then(() => defineSchema(schemas))
                 .then((mongo) => {
                     if (settings.packaged) {
                         return mongo.Account.count()

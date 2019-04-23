@@ -461,7 +461,7 @@ public class TestMVStore extends TestBase {
         m = s.openMap("data");
         assertEquals("Hello World", m.get(0));
         s.close();
-
+/*
         FileUtils.setReadOnly(fileName);
         s = new MVStore.Builder().
                 encryptionKey("007".toCharArray()).
@@ -470,7 +470,7 @@ public class TestMVStore extends TestBase {
         assertTrue(s.getFileStore().isReadOnly());
         m = s.openMap("data");
         assertEquals("Hello World", m.get(0));
-        s.close();
+        s.close();*/
 
     }
 

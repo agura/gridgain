@@ -332,7 +332,7 @@ public class TestFileSystem extends TestBase {
                 len++;
             }
             assertEquals(len, FileUtils.size(f));
-            testReadOnly(f);
+//            testReadOnly(f);
         }
         String urlJar = "jdbc:h2:zip:" + getBaseDir() + "/fsJar.zip!/fsJar";
         conn = DriverManager.getConnection(urlJar, "sa", "sa");

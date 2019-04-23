@@ -4,19 +4,7 @@ env:
     mocha: true
 parserOptions:
     sourceType: module
-    ecmaFeatures:
-        arrowFunctions: true
-        blockBindings: true
-        classes: true
-        defaultParams: true
-        destructuring: true
-        module: true
-        objectLiteralComputedProperties: true
-        objectLiteralShorthandMethods: true
-        objectLiteralShorthandProperties: true
-        spread: true
-        templateStrings: true
-        experimentalObjectRestSpread: true
+    ecmaVersion: 2018
 
 rules:
     arrow-parens: [1, "always"]

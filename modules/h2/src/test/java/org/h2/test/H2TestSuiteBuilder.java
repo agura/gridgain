@@ -47,8 +47,7 @@ public class H2TestSuiteBuilder extends TestAll {
 
     /** {@inheritDoc} */
     @Override protected void addTest(TestBase test) {
-        if (test.isEnabled())
-            suite.addTest(new H2TestCase(this, test));
+        suite.addTest(new H2TestCase(this, test));
     }
 
     /**

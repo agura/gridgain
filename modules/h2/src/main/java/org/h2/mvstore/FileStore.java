@@ -146,6 +146,7 @@ public class FileStore {
                     "Directory does not exist: {0}", parent);
         }
         if (f.exists() && !f.canWrite()) {
+            System.out.println("Found read only: "+fileName);
             readOnly = true;
         }
         this.readOnly = readOnly;

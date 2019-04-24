@@ -1730,7 +1730,7 @@ public class TestFunctions extends TestDb implements AggregateFunction {
     }
 
     private void testToCharFromNumber() throws SQLException {
-        Locale.setDefault(Locale.ENGLISH);
+        Locale.setDefault(Locale.US);
 
         deleteDb("functions");
         Connection conn = getConnection("functions");

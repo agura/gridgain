@@ -1730,11 +1730,13 @@ public class TestFunctions extends TestDb implements AggregateFunction {
     }
 
     private void testToCharFromNumber() throws SQLException {
+        Locale.setDefault(Locale.ENGLISH);
+
         deleteDb("functions");
         Connection conn = getConnection("functions");
         Statement stat = conn.createStatement();
 
-        Currency currency = Currency.getInstance(Locale.US);
+        Currency currency = Currency.getInstance(Locale.getDefault());
         String cc = currency.getCurrencyCode();
         String cs = currency.getSymbol();
 

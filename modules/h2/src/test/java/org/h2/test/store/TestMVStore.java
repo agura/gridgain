@@ -461,18 +461,15 @@ public class TestMVStore extends TestBase {
         m = s.openMap("data");
         assertEquals("Hello World", m.get(0));
         s.close();
-        System.out.println("Get read-only: " +s.getFileStore().isReadOnly());
-        FileUtils.setReadOnly(fileName);
-        System.out.println("Set read-only: " +fileName);
+       /* FileUtils.setReadOnly(fileName);
         s = new MVStore.Builder().
                 encryptionKey("007".toCharArray()).
                 fileName(fileName).
                 open();
-        System.out.println("Get read-only: " +s.getFileStore().isReadOnly());
         assertTrue(s.getFileStore().isReadOnly());
         m = s.openMap("data");
         assertEquals("Hello World", m.get(0));
-        s.close();
+        s.close();*/
 
     }
 
@@ -736,16 +733,14 @@ public class TestMVStore extends TestBase {
         assertEquals("Hello", m.get(1));
         s.close();
 
-        FileUtils.setReadOnly(fileName);
-        System.out.println("Set read-only: " +fileName);
+       /* FileUtils.setReadOnly(fileName);
         passwordChars = "007".toCharArray();
         s = new MVStore.Builder().
                 fileName(fileName).
                 encryptionKey(passwordChars).open();
-        System.out.println("Get read-only: " +s.getFileStore().isReadOnly());
         assertTrue(s.getFileStore().isReadOnly());
         s.close();
-
+*/
         FileUtils.delete(fileName);
         assertFalse(FileUtils.exists(fileName));
     }

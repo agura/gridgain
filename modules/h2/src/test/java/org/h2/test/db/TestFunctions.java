@@ -1734,7 +1734,7 @@ public class TestFunctions extends TestDb implements AggregateFunction {
         Connection conn = getConnection("functions");
         Statement stat = conn.createStatement();
 
-        Currency currency = Currency.getInstance(Locale.getDefault());
+        Currency currency = Currency.getInstance(Locale.US);
         String cc = currency.getCurrencyCode();
         String cs = currency.getSymbol();
 

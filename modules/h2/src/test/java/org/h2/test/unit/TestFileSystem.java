@@ -399,7 +399,7 @@ public class TestFileSystem extends TestBase {
         testConcurrent(fsBase);
         testRootExists(fsBase);
         testPositionedReadWrite(fsBase);
-        testSetReadOnly(fsBase);
+//        testSetReadOnly(fsBase);
         testParentEventuallyReturnsNull(fsBase);
         testSimple(fsBase);
         testTempFile(fsBase);

@@ -61,7 +61,7 @@ RUN npm install -g pm2
 
 # Update software sources and install missing applications
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4 && \
-    echo "deb http://repo.mongodb.org/apt/debian jessie/mongodb-org/3.4 main" > /etc/apt/sources.list.d/mongodb-org-3.4.list && \
+    echo "deb http://repo.mongodb.org/apt/debian jessie/mongodb-org/4.0 main" > /etc/apt/sources.list.d/mongodb-org-3.4.list && \
     apt update && \
     apt install -y --no-install-recommends \
         nginx-light \
